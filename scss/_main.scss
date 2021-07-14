@@ -1,0 +1,130 @@
+/*RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    font-family: "Bebas Neue", "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+    font-size: 1rem;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+/* LAYOUT GENERAL*/
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wraper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+#header {
+    position: sticky;
+    top: -1px;
+    z-index: 2;
+}
+
+/*ESTILOS GENERALES*/
+body {
+    color: #fff;
+}
+
+p {
+    margin: 0;
+}
+
+button:disabled {
+    opacity: 0;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+/*GENERAL DE TODAS LAS SECCIONES*/
+.containerSeccion>div>img,
+    {
+    width: 100%;
+    min-height: 50vh;
+    object-fit: cover;
+}
+
+.containerSeccionImagen {
+    background-color: lightgray;
+    border: 1px solid blue;
+    min-height: 50vh;
+}
+
+.containerSeccionTexto {
+    margin: 0 2rem;
+}
+
+.containerSeccion>div:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.seccionTitulo {
+    text-align: center;
+    font-size: 3rem;
+    margin: .5rem 0;
+}
+
+.seccionTexto {
+    font-family: serif;
+    line-height: 1.5;
+}
+
+/*-----TABLET-----*/
+@media only screen and (min-width: 768px) {
+
+    /*GENERAL DE TODAS LAS SECCIONES*/
+    .containerSeccionImagen {
+        min-height: auto;
+    }
+
+    .containerSeccion>div>img {
+        min-height: 100%;
+    }
+
+    .containerSeccionTexto {
+        margin: 2rem;
+    }
+
+    .seccionTexto {
+        font-size: 2vw;
+    }
+
+    .seccionTexto p {
+        margin-bottom: .5rem;
+    }
+}
+
+/*-----DESKTOP-----*/
+@media only screen and (min-width: 992px) {
+
+    /*GENERAL DE TODAS LAS SECCIONES*/
+    .containerSeccionTexto {
+        margin: 2rem 4rem;
+    }
+
+    .seccionTexto {
+        font-size: 1.5vw;
+        column-count: 2;
+        column-gap: 1.5rem;
+    }
+}

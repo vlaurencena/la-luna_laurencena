@@ -1,0 +1,37 @@
+@for $i from 1 through 6 {
+    .containerExploracion__item#{$i} {
+        grid-area: exploracionItem#{$i};
+    }
+}
+
+.containerExploracion {
+    color: black;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas:
+        "exploracionItem1"
+        "exploracionItem2"
+        "exploracionItem3"
+        "exploracionItem4"
+        "exploracionItem5"
+        "exploracionItem6";
+    row-gap: 2rem;
+}
+
+/*-----TABLET-----*/
+@media only screen and (min-width: 768px) {
+    .containerExploracion {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, minmax(333px, 1fr));
+        grid-template-areas:
+            "exploracionItem1 exploracionItem2"
+            "exploracionItem3 exploracionItem4"
+            "exploracionItem5 exploracionItem6";
+        row-gap: 0;
+    }
+}
+
+/*-----DESKTOP-----*/
+// @media only screen and (min-width: 992px) {}

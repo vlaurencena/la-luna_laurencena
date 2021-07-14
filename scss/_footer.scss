@@ -1,0 +1,149 @@
+footer {
+    min-height: 3.375rem;
+    background-color: $color-gris;
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+}
+
+/*FORMULARIO*/
+.footer__formularioNewsletter form input {
+    width: 100%;
+    background: transparent;
+    border: solid 1px $color-blanco;
+    padding: .5rem;
+}
+
+.footer__formularioNewsletter form {
+    position: relative;
+}
+
+footer form input::placeholder {
+    color: $color-blanco;
+}
+
+footer form input:focus {
+  color: red;
+}
+
+.footer__formularioNewsletter__boton {
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    transform: translateY(50%);
+    background: none;
+    padding: 0;
+    border: 0;
+    color: $color-blanco;
+}
+
+/*REDES SOCIALES*/
+.footer__redesSociales {
+    padding: 1rem 0;
+}
+
+.footer__redesSociales ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__redesSociales ul li {
+    display: inline;
+}
+
+/*ACORDEÓN*/
+.footer__acordeon>.card {
+    background: none;
+    border: 0;
+}
+
+.footer__acordeon>.card>.card-header {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 0;
+    display: flex;
+    justify-content: stretch;
+}
+
+.card-header,
+.card-header>.mb-0>.btn {
+    padding: 0;
+}
+
+.card-header>.mb-0>.btn-link {
+    color: $color-blanco;
+}
+
+.card-header>.mb-0>.btn-link:hover {
+    color: $color-blanco;
+    text-decoration: none;
+}
+
+.card-body ul li {
+    list-style: none;
+}
+
+.card-body ul li a {
+    color: $color-blanco;
+}
+
+.btn.disabled,
+.btn:disabled {
+    opacity: 1;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+/*-----TABLET-----*/
+@media only screen and (min-width: 768px) {
+    .footer__redesSociales {
+        padding: 0;
+        // margin-top: -5rem;
+    }
+
+    .footer__redesSociales ul {
+        justify-content: space-between;
+    }
+}
+
+/*-----DESKTOP-----*/
+@media only screen and (min-width: 992px) {
+
+    footer {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .footer__header {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .footer__formularioNewsletter {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .footer__redesSociales {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .footer__acordeon {
+        grid-area: 2 / 2 / 4 / 3;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 3rem;
+    }
+
+    .footer__acordeon__boton>.bi {
+        display: none;
+    }
+
+    .card-body {
+        padding: 0 0 0 1.25rem;
+    }
+}

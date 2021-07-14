@@ -1,0 +1,46 @@
+@for $i from 1 through 6 {
+    .containerEvolucion__item#{$i} {
+        grid-area: evolucionItem#{$i};
+    }
+}
+
+.containerEvolucion {
+    color: black;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas:
+        "evolucionItem1"
+        "evolucionItem2"
+        "evolucionItem3"
+        "evolucionItem4"
+        "evolucionItem5"
+        "evolucionItem6";
+    row-gap: 2rem;
+}
+
+/*-----TABLET-----*/
+@media only screen and (min-width: 768px) {
+    .containerEvolucion {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, minmax(333px, 1fr));
+        grid-template-areas:
+            "evolucionItem1 evolucionItem2"
+            "evolucionItem3 evolucionItem4"
+            "evolucionItem5 evolucionItem6";
+        row-gap: 0;
+    }
+
+    .containerEvolucion__item1 {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*-----DESKTOP-----*/
+@media only screen and (min-width: 992px) {
+    .containerEvolucion__item1 iframe {
+        padding: 0 5vw;
+    }
+}

@@ -1,0 +1,102 @@
+/*BARRA TIENDA*/
+
+.barraNavTienda {
+    box-shadow: 0 3px 35px 0 rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 3.3rem;
+    z-index: 1;
+}
+
+.barraNavTienda__contenedor {
+    min-height: 3.375rem;
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 0 1rem;
+
+}
+
+.barraNavTienda ul li {
+    display: inline;
+}
+
+.barraNavTienda ul li:first-of-type {
+    margin-right: 1rem;
+}
+
+.barraNavTienda__contenedor>ul>li>.badge {
+    position: relative;
+    top: -1px;
+}
+
+// 
+
+/*CONTENEDOR TIENDA*/
+
+.showroomProductos {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*CAROUSEL*/
+
+.carousel {
+    margin-bottom: 1rem;
+}
+
+/*CATEGORIAS*/
+
+.contenedorCategorias {
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria {
+    display: inline-block;
+    position: relative;
+    text-align: center !important;
+    margin: 1rem 0;
+}
+
+.categoria__texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.categoria__texto__nombre {
+    font-size: 2rem;
+}
+
+.categoria__texto__boton {
+    display: inline-block;
+    padding: 1rem;
+    background-color: $color-gris;
+    letter-spacing: 2px;
+}
+
+.categoria>img {
+    width: 100%;
+}
+
+/*-----TABLET-----*/
+@media only screen and (min-width: 768px) {
+    .showroomProductos {
+        padding: 0 1rem;
+    }
+
+    .contenedorCategorias {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+/*-----DESKTOP-----*/
+@media only screen and (min-width: 992px) {}

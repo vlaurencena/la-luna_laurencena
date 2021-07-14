@@ -1,0 +1,13 @@
+@mixin flexCentrado() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes escalarImagen {
+    from {}
+
+    to {
+        transform: scale(1.05);
+    }
+}

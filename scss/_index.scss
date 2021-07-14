@@ -1,0 +1,143 @@
+.containerHome {
+    display: grid;
+    grid-template-rows: minmax(333px, 1fr) minmax(333px, 1fr) minmax(333px, 1fr) minmax(333px, 1fr);
+    grid-template-columns: 100%;
+    height: 100%;
+}
+
+.containerHome a {
+    text-decoration: none;
+    color: white;
+}
+
+.containerHome___seccionSatelite,
+.containerHome___seccionEvolucion,
+.containerHome___seccionExploracion {
+    border-bottom: 1px solid white;
+
+}
+
+.containerHome___seccionSatelite,
+.containerHome___seccionEvolucion,
+.containerHome___seccionExploracion,
+.containerHome___seccionTienda {
+    overflow: hidden;
+}
+
+.containerHome>div>img {
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.containerHome>div>picture {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.containerHome>div>picture>source,
+.containerHome>div>picture>img {
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@each $seccion,
+$extension-img in $secciones {
+    .containerHome___seccion#{$seccion} {
+        position: relative;
+    }
+}
+
+.containerHome___seccion___texto,
+.containerHome___seccion___boton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 6px #000000;
+}
+
+/*-----TABLET-----*/
+@media only screen and (min-width: 768px) {
+
+    @each $seccion,
+    $extension in $secciones {
+        .containerHome___seccion#{$seccion} {
+            grid-area: seccion-#{$extension};
+        }
+    }
+
+    .containerHome {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template:
+            "seccion-satelite seccion-satelite"
+            "seccion-evolucion seccion-exploracion"
+            "seccion-tienda seccion-tienda";
+    }
+
+    .containerHome___seccionEvolucion {
+        border-right: 1px solid white;
+    }
+
+    .containerHome___seccionSatelite {}
+
+    .containerHome___seccionSatelite__titulo {}
+
+    .containerHome___seccionSatelite__subtitulo {}
+
+    .containerHome___seccion___boton {
+        font-size: 2rem;
+    }
+
+}
+
+/*-----DESKTOP-----*/
+@media only screen and (min-width: 992px) {
+    .containerHome {
+        // grid-template-rows: repeat(2, auto);
+        grid-template-rows: 3fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template:
+            "seccion-satelite seccion-satelite seccion-satelite"
+            "seccion-evolucion seccion-exploracion seccion-tienda"
+    }
+
+    .containerHome___seccionSatelite {}
+
+    .containerHome___seccionSatelite__titulo {
+        font-size: 10rem;
+
+    }
+
+    .containerHome___seccionSatelite__subtitulo {
+        font-size: 1.65rem;
+        margin-top: -1rem;
+        margin-left: .2rem;
+    }
+
+    .containerHome___seccionEvolucion,
+    .containerHome___seccionExploracion {
+        border-bottom: 0;
+    }
+
+
+    .containerHome___seccion___boton {
+        font-size: 2rem;
+    }
+
+    .containerHome___seccionSatelite>.containerHome___seccion___texto {
+        @include flexCentrado();
+        flex-direction: column;
+    }
+
+    .containerHome>div:hover>img {
+        animation: escalarImagen 1s forwards ease-in-out;
+    }
+
+       .containerHome>div:hover>picture>img {
+        animation: escalarImagen 1s forwards ease-in-out;
+    }
+}
