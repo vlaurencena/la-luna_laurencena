@@ -24,24 +24,24 @@
     overflow: hidden;
 }
 
-.containerHome>div>img {
-    min-height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+// .containerHome>div>img {
+//     min-height: 100%;
+//     width: 100%;
+//     object-fit: cover;
+// }
 
-.containerHome>div>picture {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
+// .containerHome>div>picture {
+//     height: 100%;
+//     width: 100%;
+//     overflow: hidden;
+// }
 
-.containerHome>div>picture>source,
-.containerHome>div>picture>img {
-    min-height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+// .containerHome>div>picture>source,
+// .containerHome>div>picture>img {
+//     min-height: 100%;
+//     width: 100%;
+//     object-fit: cover;
+// }
 
 @each $seccion,
 $extension-img in $secciones {
