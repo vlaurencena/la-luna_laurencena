@@ -3,6 +3,7 @@
     grid-template-rows: minmax(333px, 1fr) minmax(333px, 1fr) minmax(333px, 1fr) minmax(333px, 1fr);
     grid-template-columns: 100%;
     height: 100%;
+    grid-gap: 10px;
 }
 
 .containerHome a {
@@ -12,36 +13,25 @@
 
 .containerHome___seccionSatelite,
 .containerHome___seccionEvolucion,
-.containerHome___seccionExploracion {
-    border-bottom: 1px solid white;
-
-}
-
-.containerHome___seccionSatelite,
-.containerHome___seccionEvolucion,
 .containerHome___seccionExploracion,
 .containerHome___seccionTienda {
     overflow: hidden;
 }
 
-// .containerHome>div>img {
-//     min-height: 100%;
-//     width: 100%;
-//     object-fit: cover;
-// }
+.containerHome__seccionImagen {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
-// .containerHome>div>picture {
-//     height: 100%;
-//     width: 100%;
-//     overflow: hidden;
-// }
-
-// .containerHome>div>picture>source,
-// .containerHome>div>picture>img {
-//     min-height: 100%;
-//     width: 100%;
-//     object-fit: cover;
-// }
+@each $seccion,
+$extension in $secciones {
+    .containerHome__imagen#{$seccion} {
+        background-image: url("../media/home/home-#{$extension}-sm.jpeg");
+    }
+}
 
 @each $seccion,
 $extension-img in $secciones {
@@ -72,14 +62,17 @@ $extension-img in $secciones {
     .containerHome {
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        grid-template:
+        grid-template-areas:
             "seccion-satelite seccion-satelite"
             "seccion-evolucion seccion-exploracion"
             "seccion-tienda seccion-tienda";
     }
 
-    .containerHome___seccionEvolucion {
-        border-right: 1px solid white;
+    @each $seccion,
+    $extension in $secciones {
+        .containerHome__imagen#{$seccion} {
+            background-image: url("../media/home/home-#{$extension}-md.jpeg");
+        }
     }
 
     .containerHome___seccionSatelite {}
@@ -97,15 +90,20 @@ $extension-img in $secciones {
 /*-----DESKTOP-----*/
 @media only screen and (min-width: 992px) {
     .containerHome {
-        // grid-template-rows: repeat(2, auto);
-        grid-template-rows: 3fr 1fr;
+        grid-template-rows: minmax(700px, 2fr) minmax(350px, 1fr);
         grid-template-columns: repeat(3, 1fr);
-        grid-template:
+        grid-template-areas:
             "seccion-satelite seccion-satelite seccion-satelite"
             "seccion-evolucion seccion-exploracion seccion-tienda"
     }
 
-    .containerHome___seccionSatelite {}
+    @each $seccion,
+    $extension in $secciones {
+        .containerHome__imagen#{$seccion} {
+            background-image: url("../media/home/home-#{$extension}-lg.jpeg");
+        }
+    }
+
 
     .containerHome___seccionSatelite__titulo {
         font-size: 10rem;
@@ -118,12 +116,6 @@ $extension-img in $secciones {
         margin-left: .2rem;
     }
 
-    .containerHome___seccionEvolucion,
-    .containerHome___seccionExploracion {
-        border-bottom: 0;
-    }
-
-
     .containerHome___seccion___boton {
         font-size: 2rem;
     }
@@ -133,11 +125,7 @@ $extension-img in $secciones {
         flex-direction: column;
     }
 
-    .containerHome>div:hover>img {
-        animation: escalarImagen 1s forwards ease-in-out;
-    }
-
-       .containerHome>div:hover>picture>img {
+    .containerHome>div:hover>.containerHome__seccionImagen {
         animation: escalarImagen 1s forwards ease-in-out;
     }
 }
