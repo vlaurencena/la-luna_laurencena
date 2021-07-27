@@ -1,29 +1,36 @@
 .containerHome {
     display: grid;
-    grid-template-rows: minmax(333px, 1fr) minmax(333px, 1fr) minmax(333px, 1fr) minmax(333px, 1fr);
+    grid-template-rows: minmax(333px, 1.5fr) minmax(333px, 1fr) minmax(333px, 1fr) minmax(333px, 1fr);
     grid-template-columns: 100%;
     height: 100%;
     grid-gap: 10px;
-}
 
-.containerHome a {
-    text-decoration: none;
-    color: white;
-}
+    & a {
+        text-decoration: none;
+        color: white;
+    }
 
-.containerHome___seccionSatelite,
-.containerHome___seccionEvolucion,
-.containerHome___seccionExploracion,
-.containerHome___seccionTienda {
-    overflow: hidden;
-}
+    &__seccionImagen {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 
-.containerHome__seccionImagen {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    &__seccionTexto {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 6px #000000;
+        text-align: center;
+    }
+
+    &__seccionBoton {
+        @extend .containerHome__seccionTexto;
+        font-size: 2rem;
+    }
 }
 
 @each $seccion,
@@ -31,22 +38,21 @@ $extension in $secciones {
     .containerHome__imagen#{$seccion} {
         background-image: url("../media/home/home-#{$extension}-sm.jpeg");
     }
-}
 
-@each $seccion,
-$extension-img in $secciones {
-    .containerHome___seccion#{$seccion} {
+    .HomeSeccion#{$seccion} {
         position: relative;
+        overflow: hidden;
     }
 }
 
-.containerHome___seccion___texto,
-.containerHome___seccion___boton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 6px #000000;
+.HomeSeccionSatelite {
+    &__titulo {
+        font-size: 4rem;
+    }
+
+    &__subtitulo {
+        font-size: 1.5rem;
+    }
 }
 
 /*-----TABLET-----*/
@@ -54,13 +60,17 @@ $extension-img in $secciones {
 
     @each $seccion,
     $extension in $secciones {
-        .containerHome___seccion#{$seccion} {
+        .HomeSeccion#{$seccion} {
             grid-area: seccion-#{$extension};
+        }
+
+        .containerHome__imagen#{$seccion} {
+            background-image: url("../media/home/home-#{$extension}-md.jpeg");
         }
     }
 
     .containerHome {
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: minmax(80vh, 2fr) minmax(20vh, 1fr) minmax(20vh, 1fr);
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             "seccion-satelite seccion-satelite"
@@ -68,33 +78,20 @@ $extension-img in $secciones {
             "seccion-tienda seccion-tienda";
     }
 
-    @each $seccion,
-    $extension in $secciones {
-        .containerHome__imagen#{$seccion} {
-            background-image: url("../media/home/home-#{$extension}-md.jpeg");
-        }
-    }
-
-    .containerHome___seccionSatelite {}
-
-    .containerHome___seccionSatelite__titulo {}
-
-    .containerHome___seccionSatelite__subtitulo {}
-
-    .containerHome___seccion___boton {
-        font-size: 2rem;
-    }
-
 }
 
 /*-----DESKTOP-----*/
 @media only screen and (min-width: 992px) {
     .containerHome {
-        grid-template-rows: minmax(700px, 2fr) minmax(350px, 1fr);
+        grid-template-rows: minmax(80vh, 1.5fr) minmax(40vh, 1fr);
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "seccion-satelite seccion-satelite seccion-satelite"
-            "seccion-evolucion seccion-exploracion seccion-tienda"
+            "seccion-evolucion seccion-exploracion seccion-tienda";
+
+        &>div:hover>.containerHome__seccionImagen {
+            animation: escalarImagen 1s forwards ease-in-out;
+        }
     }
 
     @each $seccion,
@@ -104,28 +101,15 @@ $extension-img in $secciones {
         }
     }
 
+    .HomeSeccionSatelite {
+        &__titulo {
+            font-size: 10rem;
+        }
 
-    .containerHome___seccionSatelite__titulo {
-        font-size: 10rem;
-
-    }
-
-    .containerHome___seccionSatelite__subtitulo {
-        font-size: 1.65rem;
-        margin-top: -1rem;
-        margin-left: .2rem;
-    }
-
-    .containerHome___seccion___boton {
-        font-size: 2rem;
-    }
-
-    .containerHome___seccionSatelite>.containerHome___seccion___texto {
-        @include flexCentrado();
-        flex-direction: column;
-    }
-
-    .containerHome>div:hover>.containerHome__seccionImagen {
-        animation: escalarImagen 1s forwards ease-in-out;
+        &__subtitulo {
+            font-size: 1.65rem;
+            margin-top: -1rem;
+            margin-left: .2rem;
+        }
     }
 }

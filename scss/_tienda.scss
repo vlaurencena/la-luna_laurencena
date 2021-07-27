@@ -1,55 +1,48 @@
 /*BARRA TIENDA*/
-
 .barraNavTienda {
     box-shadow: 0 3px 35px 0 rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 3.3rem;
     z-index: 1;
+
+    &__contenedor {
+        min-height: 3.375rem;
+        max-width: 1200px;
+        display: flex;
+        margin: auto;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: white;
+        color: black;
+        padding: 0 1rem;
+    }
+
+    & ul li {
+        display: inline;
+
+        &:first-of-type {
+            margin-right: 1rem;
+        }
+
+        &>.badge {
+            position: relative;
+            top: -1px;
+        }
+    }
 }
-
-.barraNavTienda__contenedor {
-    min-height: 3.375rem;
-    max-width: 1200px;
-    display: flex;
-    margin: auto;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: white;
-    color: black;
-    padding: 0 1rem;
-
-}
-
-.barraNavTienda ul li {
-    display: inline;
-}
-
-.barraNavTienda ul li:first-of-type {
-    margin-right: 1rem;
-}
-
-.barraNavTienda__contenedor>ul>li>.badge {
-    position: relative;
-    top: -1px;
-}
-
-// 
 
 /*CONTENEDOR TIENDA*/
-
 .showroomProductos {
     max-width: 1200px;
     margin: auto;
 }
 
 /*CAROUSEL*/
-
 .carousel {
     margin-bottom: 1rem;
 }
 
 /*CATEGORIAS*/
-
 .contenedorCategorias {
     display: flex;
     flex-direction: column;
@@ -60,29 +53,57 @@
     position: relative;
     text-align: center !important;
     margin: 1rem 0;
+
+    &>img {
+        width: 100%;
+    }
+
+    &__texto {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
 }
 
-.categoria__texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-}
-
-.categoria__texto__nombre {
+.nombreCategoria {
     font-size: 2rem;
 }
 
-.categoria__texto__boton {
+.botonCategoria {
     display: inline-block;
     padding: 1rem;
     background-color: $color-gris;
     letter-spacing: 2px;
+
+    & a {
+        color: $color-blanco;
+    }
 }
 
-.categoria>img {
-    width: 100%;
+/*CARTES NECESITAS AYUDA*/
+.contenedorNecesitasAyuda {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.37);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    & i {
+        color: green;
+        padding-right: 1rem;
+        font-size: 2rem;
+    }
+
+    & div {
+        color: black;
+    }
 }
 
 /*-----TABLET-----*/
@@ -99,4 +120,4 @@
 }
 
 /*-----DESKTOP-----*/
-@media only screen and (min-width: 992px) {}
+// @media only screen and (min-width: 992px) {}

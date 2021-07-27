@@ -1,4 +1,4 @@
-#header {
+.navContainer {
     min-height: 3.375rem;
     background-color: $color-gris;
     z-index: 16;
@@ -8,34 +8,28 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
-}
 
-.navbar-nav {
-    align-items: center;
+    &-nav {
+        align-items: center;
+    }
+
+    &-collapse {
+        justify-content: center;
+    }
+
+    &-toggler {
+        color: rgba(255, 255, 255, .9);
+        border-color: rgba(255, 255, 255, .9);
+    }
 }
 
 a.nav-link {
-    color: $color-blanco !important;
-    text-decoration: none;
+    color: $color-blanco;
     letter-spacing: .4rem;
 }
 
-a:active {
-    color: $color-blanco;
-}
-
-.navbar-collapse {
-    justify-content: center;
-}
-
-.navbar-toggler {
-    color: rgba(255, 255, 255, .9);
-    border-color: rgba(255, 255, 255, .9);
-}
-
-.active a,
-a.active {
-    color: $color-gris-oscuro !important;
+.active a {
+    color: $color-gris-oscuro;
 }
 
 .separadorNav {
@@ -43,6 +37,7 @@ a.active {
 }
 
 .seccionActiva {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -50,21 +45,7 @@ a.active {
 }
 
 /*-----TABLET-----*/
-@media only screen and (min-width: 768px) {
-    .header__navbar {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .header__navbar ul li {
-        display: inline;
-    }
-
-    .iconoHamburguesa {
-        display: none;
-    }
-
-}
+// @media only screen and (min-width: 768px) {}
 
 /*-----DESKTOP-----*/
 @media only screen and (min-width: 992px) {
@@ -76,29 +57,27 @@ a.active {
     .nav-link {
         display: inline-block;
         position: relative;
-        color: $color-blanco;
-    }
 
-    .nav-link:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: $color-blanco;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $color-blanco;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
 
-    .nav-link:hover:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
+        &:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
     }
 
     .seccionActiva {
         display: none;
     }
-
 }

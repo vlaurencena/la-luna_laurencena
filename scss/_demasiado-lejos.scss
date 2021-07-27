@@ -1,0 +1,54 @@
+.containerDemasiadoLejos {
+    background-image: url("../media/demasiado-lejos/demasiado-lejos-fondo.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+
+    & img {
+        width: 80%;
+        animation-name: demasiadoLejos__imagen;
+        animation-duration: 20s;
+        animation-fill-mode: forwards;
+    }
+
+    &__seccionBoton {
+        font-size: 2rem;
+        color: red;
+        animation-name: demasiadoLejos__boton;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+        & a {
+            color: $color-blanco;
+        }
+    }
+}
+
+
+/*-----TABLET-----*/
+@media only screen and (min-width: 768px) {
+    .containerDemasiadoLejos {
+        padding: 5rem;
+    }
+}
+
+
+/*-----DESKTOP-----*/
+@media only screen and (min-width: 992px) {
+
+    .containerDemasiadoLejos {
+        justify-content: space-around;
+
+        & img {
+            width: 50%;
+            max-width: 388px;
+        }
+    }
+}

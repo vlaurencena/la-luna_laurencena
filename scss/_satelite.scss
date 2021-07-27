@@ -1,4 +1,4 @@
-@for $i from 1 through 6 {
+@for $i from 1 through 3 {
     .containerSatelite__item#{$i} {
         grid-area: sateliteItem#{$i};
     }
@@ -13,25 +13,91 @@
     grid-template-areas:
         "sateliteItem1"
         "sateliteItem2"
-        "sateliteItem3"
-        "sateliteItem4"
-        "sateliteItem5"
-        "sateliteItem6";
+        "sateliteItem3";
     row-gap: 2rem;
+
+    &__item3 {
+        margin: 2rem;
+
+        &-versionEscritorio {
+            display: none;
+        }
+
+        &-versionMobile {
+
+            &.imagenes {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                &>div>img {
+                    width: 40%;
+                    margin: auto;
+                    display: block;
+                }
+
+            }
+
+            &>div {
+                &>.carousel-indicators {
+                    bottom: -50px;
+
+                    &>li {
+                        background-color: gray;
+                    }
+                }
+
+                &>div>a {
+                    background-color: $color-gris;
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        &.titulo {
+            grid-column: 1 / 3;
+            font-size: 2rem;
+        }
+    }
+}
+
+.contenedor__carousel-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
 }
 
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
     .containerSatelite {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, minmax(333px, 1fr));
+        grid-template-rows: repeat(2, auto);
         grid-template-areas:
             "sateliteItem1 sateliteItem2"
-            "sateliteItem3 sateliteItem4"
-            "sateliteItem5 sateliteItem6";
+            "sateliteItem3 sateliteItem3";
         row-gap: 0;
+
+        &__item3-versionMobile>div>div>a {
+            height: 4rem;
+            width: 4rem;
+        }
     }
 }
 
 /*-----DESKTOP-----*/
-// @media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    .containerSatelite__item3 {
+        &-versionMobile {
+            display: none;
+        }
+
+        &-versionEscritorio {
+            display: grid;
+            grid-template-columns: 10vw repeat(9, auto);
+            text-align: center;
+            align-items: center;
+            margin: 2rem 4rem;
+        }
+    }
+}

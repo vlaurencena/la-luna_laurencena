@@ -1,4 +1,4 @@
-@for $i from 1 through 6 {
+@for $i from 1 through 4 {
     .containerEvolucion__item#{$i} {
         grid-area: evolucionItem#{$i};
     }
@@ -9,38 +9,138 @@
     height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(auto, 1fr);
     grid-template-areas:
         "evolucionItem1"
         "evolucionItem2"
         "evolucionItem3"
-        "evolucionItem4"
-        "evolucionItem5"
-        "evolucionItem6";
+        "evolucionItem4";
     row-gap: 2rem;
+
+    &__item2 iframe {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 960px;
+        height: 100%;
+        min-height: 315px;
+    }
+
+    &__item4 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        text-align: center;
+        row-gap: 2px;
+
+        & img {
+            display: block;
+            max-width: 100%;
+            margin: auto;
+
+        }
+
+        & .containerSeccionTexto {
+            padding: 0 4rem 2rem 4rem;
+
+            & .seccionTexto {
+                column-count: 1;
+                border-bottom: solid 2px black;
+
+                &.noBorde {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        &__titulo {
+            display: none;
+        }
+    }
 }
 
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
     .containerEvolucion {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, minmax(333px, 1fr));
+        grid-template-rows: auto;
         grid-template-areas:
             "evolucionItem1 evolucionItem2"
-            "evolucionItem3 evolucionItem4"
-            "evolucionItem5 evolucionItem6";
+            "evolucionItem3 evolucionItem3"
+            "evolucionItem4 evolucionItem4";
         row-gap: 0;
-    }
 
-    .containerEvolucion__item1 {
-        display: flex;
-        align-items: center;
+        &__item3 .seccionTexto {
+            column-count: 2;
+            border-bottom: 0;
+        }
+
+        &__item4 {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+
+            & .containerSeccionTexto {
+                margin: 0 2rem 0 0;
+                border-bottom: solid 2px black;
+                padding: 0;
+
+                &:last-of-type {
+                    border-bottom: 0;
+                }
+
+                & .seccionTexto {
+                    border-bottom: 0;
+                }
+            }
+        }
+
     }
 }
 
 /*-----DESKTOP-----*/
 @media only screen and (min-width: 992px) {
-    .containerEvolucion__item1 iframe {
-        padding: 0 5vw;
+
+    .containerEvolucion {
+
+        &__item3 .seccionTexto {
+            column-count: 4;
+        }
+
+        &__item4 {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto auto 150px;
+            grid-template-areas:
+                "item4__titulo item4__titulo item4__titulo item4__titulo item4__titulo item4__titulo"
+                "item4__imagen-1 item4__imagen-2 item4__imagen-3 item4__imagen-4 item4__imagen-5 item4__imagen-6"
+                "item4__explicacion item4__explicacion item4__explicacion item4__explicacion item4__explicacion item4__explicacion";
+
+            &__titulo {
+                display: block;
+                grid-area: item4__titulo;
+            }
+
+            & img {
+                width: 100%;
+            }
+
+            & .containerSeccionTexto {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    @for $i from 1 through 6 {
+        .containerEvolucion__item4__imagen-#{$i} {
+            grid-area: item4__imagen-#{$i};
+        }
+
+        .containerEvolucion__item4__explicacion-#{$i} {
+            grid-area: item4__explicacion;
+            display: none;
+        }
+
+        .containerEvolucion__item4__imagen-#{$i}:hover~.containerEvolucion__item4__explicacion-#{$i} {
+            display: block;
+            animation: aparicion 1s ease 0s 1 normal forwards;
+        }
     }
 }

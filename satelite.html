@@ -1,118 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <!-- META TAGS -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="La Luna es un satélite con características únicas dentro del sistema solar. Averigua por qué y otras curiosidades haciendo clic aquí.">
+    <meta name="keywords" content="luna, satelite, tierra, sistema solar, informacion">
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type=text/css href="css/estilos.css">
-    <meta name="description" content="La Luna es un satélite con características únicas dentro del sistema solar. Averigua por qué y otras curiosidades haciendo clic aquí.">
-    <meta name="keywords" content="luna, satelite, tierra, sistema solar, informacion">
+    <!-- TITLE -->
     <title>La Luna | El satélite de la Tierra</title>
 </head>
 
 <body>
     <div class="wraper">
         <!--HEADER-->
-        <div id="header">
+        <header class="navContainer">
             <nav class="navbar navbar-expand-lg ">
-                <button id="navbar__boton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="bi bi-list"></i>
-                </button>
+                <button id="navbar__boton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">INICIO</span></a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a> </li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="satelite.html">SATÉLITE</a>
-                        </li>
+                        <li class="nav-item active"><a class="nav-link" href="satelite.html">SATÉLITE</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="evolucion.html">EVOLUCIÓN</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="evolucion.html">EVOLUCIÓN</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="exploracion.html">EXPLORACIÓN</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="exploracion.html">EXPLORACIÓN</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">CONTACTO</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tienda.html">TIENDA</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="tienda.html">TIENDA</a></li>
                     </ul>
                 </div>
-                <div class="seccionActiva active nav-item">
-                    <h1><a class="nav-link" href="#">SATÉLITE</a></h1>
-                </div>
+                <h1 class="seccionActiva active nav-item"><a class="nav-link" href="#">SATÉLITE</a></h1>
             </nav>
-        </div>
+        </header>
         <!--MAIN-->
-        <div class="main">
-            <div class="containerSatelite containerSeccion">
-                <div class="containerSatelite__item1 containerSeccionImagen">
-                    <img src="media/home/home-evolucion.jpeg" alt="">
-                </div>
-                <div class="containerSatelite__item2 containerSeccionTexto">
-                    <h2 class="seccionTitulo">El origen de nuestro satélite</h2>
-                    <div class="seccionTexto">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                    </div>
-                </div>
-                <div class="containerSatelite__item3 containerSeccionTexto">
-                    <h2 class="seccionTitulo">La evolución de la Luna</h2>
-                    <div class="seccionTexto">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                    </div>
-                </div>
-                <div class="containerSatelite__item4 containerSeccionImagen">
-                </div>
-                <div class="containerSatelite__item5 containerSeccionImagen">
-                </div>
-                <div class="containerSatelite__item6 containerSeccionTexto">
-                    <h2 class="seccionTitulo">El futuro</h2>
-                    <div class="seccionTexto">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                    </div>
+        <main class="containerSatelite">
+            <div class="containerSatelite__item1 containerSeccionImagen">
+                <img src="media/satelite/satelite-item-1.png" alt="" srcset="
+                media/satelite/satelite-item-1-sm.jpeg 768w,
+                media/satelite/satelite-item-1-md.jpeg 496w,
+                media/satelite/satelite-item-1-lg.jpeg 960w,
+                " sizes="
+                (min-width: 992px) 960px,
+                (min-width: 768px) 496px,
+                768px,
+                ">
+            </div>
+            <div class="containerSatelite__item2 containerSeccionTexto">
+                <h2 class="seccionTitulo">CASI NO ES UN SATÉLITE</h2>
+                <div class="seccionTexto">
+                    <p>El tamaño de la Luna es enorme en proporción con la Tierra: equivale al 27% de esta, por lo que ambas están al límite de lo que se considera un planeta doble. Solo es posible hallar lunas de este tamaño orbitando los planetas gigantes.</p>
+                    <p>En nuestro sistema solar, todos los satélites tienen masas inferiores a 1:4.000 la masa de su planeta o planeta enano, con la excepción de los sistemas Tierra-Luna y Plutón-Caronte que tienen una proporción de 1:81 y 1:7 respectivamente.</p>
+                    <p>El límite comúnmente aceptado para diferenciar entre un planeta binario y un sistema planeta-satélite, se basa en la situación del centro de masas de los dos cuerpos o baricentro. Si el baricentro no se encuentra bajo la superficie de ninguno de los dos cuerpos, se da por hecho que es un sistema planeta binario.</p>
+                    <p>Siendo así, ambos astros orbitarían el uno respecto al otro mediante un eje situado en el espacio libre ubicado entre de los dos. Según esta definición, Plutón (planeta enano) y Caronte (la más grande de sus cinco lunas) se considerarían ambos como un sistema de planeta binario compuesto por ambos cuerpos celestes; mientras que el sistema de la Tierra y la Luna, sería propiamente un sistema planeta-satélite.</p>
                 </div>
             </div>
-        </div>
+            <div class="containerSatelite__item3">
+                <h2 class="seccionTitulo">COMPARATIVA TIERRA LUNA</h2>
+                <!--VERSIÓN MOBILE-->
+                <div class="containerSatelite__item3-versionMobile">
+                    <!--IMAGENES-->
+                    <div class="containerSatelite__item3-versionMobile imagenes">
+                        <div><img src="media/satelite/satelite-item-3-tierra.png" alt="Imagen de la Tierra"></div>
+                        <div><img src="media/satelite/satelite-item-3-luna.png" alt="Imagen de la Luna"></div>
+                    </div>
+                    <!--CAROUSEL-->
+                    <div id="carouselExampleIndicators" class=" carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="contenedor__carousel-item">
+                                    <div>510 millones de km<sup>2</sup></div>
+                                    <div>38 millones de km<sup>2</sup></div>
+                                    <div class="containerSatelite__item3 titulo">SUPERFICIE</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="contenedor__carousel-item">
+                                    <div>23 h 56 min</div>
+                                    <div>27 días, 7 horas</div>
+                                    <div class="containerSatelite__item3 titulo">ROTACIÓN (DURACIÓN DEL DÍA)</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="contenedor__carousel-item">
+                                    <div>365,25 días terrestres</div>
+                                    <div>27,32 días terrestres</div>
+                                    <div class="containerSatelite__item3 titulo">PERÍODO ORBITAL</div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--VERSIÓN ESCRITORIO-->
+                <div class="containerSatelite__item3-versionEscritorio">
+                    <div></div>
+                    <div>SUPERFICIE</div>
+                    <div>MASA</div>
+                    <div>DISTANCIA MEDIA ORBITAL</div>
+                    <div>ROTACIÓN (DURACIÓN DEL DÍA)</div>
+                    <div>OBLICUIDAD</div>
+                    <div>PERÍODO ORBITAL</div>
+                    <div>TEMPERATURA MEDIA</div>
+                    <div>EXCENTRICIDAD ORBITAL</div>
+                    <div>GRAVEDAD EN SUPERFICIE</div>
+                    <div><img src="media/satelite/satelite-item-3-tierra.png" alt=""></div>
+                    <div>510 millones de km<sup>2</sup></div>
+                    <div>5,972 x10<sup>24</sup>kg</div>
+                    <div>150 millones km</div>
+                    <div>23 h 56 min</div>
+                    <div>23,5°</div>
+                    <div>365,25 días terrestres</div>
+                    <div>14 °C</div>
+                    <div>0,017</div>
+                    <div>9,8 m/s<sup>2</sup></div>
+                    <div><img src="media/satelite/satelite-item-3-luna.png" alt=""></div>
+                    <div>38 millones de km<sup>2</sup></div>
+                    <div>73,49 x 10<sup>21</sup> kg</div>
+                    <div>384 400 km</div>
+                    <div>27 días, 7 horas</div>
+                    <div>1,54°</div>
+                    <div>27,32 días terrestres</div>
+                    <div>-25 °C</div>
+                    <div>0,0549</div>
+                    <div>1,62 m/s<sup>2</sup></div>
+                </div>
+            </div>
+        </main>
         <!--FOOTER-->
-        <footer>
+        <footer class="footer">
+            <!--HEADER-->
             <div class="footer__header">
                 <p>La Luna</p>
             </div>
+            <!--NEWSLETTER-->
             <div class="footer__formularioNewsletter">
                 <p>Suscríbete a nuestro newsletter</p>
-                <form class="formularioNewsletter" action="exploracion.html" method="get">
+                <form action="exploracion.html" method="get">
                     <input type="email" placeholder="Mi correo electrónico">
-                    <button class="footer__formularioNewsletter__boton"><i class="bi bi-arrow-right"></i></button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNewsletter"><i class="bi bi-arrow-right"></i></button>
                 </form>
             </div>
+            <!-- MODAL -->
+            <div class="footer__modal modal fade" id="modalNewsletter" tabindex="-1" role="dialog" aria-labelledby="modalNewsletterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">¡Gracias por suscribirte!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Te hemos enviado un correo electrónico para que confirmes tu suscripción.
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button></div>
+                    </div>
+                </div>
+            </div>
+            <!--REDES SOCIALES-->
             <div class="footer__redesSociales">
                 <ul>
-                    <li><i class="bi bi-facebook"></i></li>
-                    <li><i class="bi bi-instagram"></i></li>
-                    <li><i class="bi bi-twitter"></i></li>
-                    <li><i class="bi bi-youtube"></i></li>
+                    <li><a href="demasiado-lejos.html"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="demasiado-lejos.html"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="demasiado-lejos.html"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="demasiado-lejos.html"><i class="bi bi-youtube"></i></a></li>
                 </ul>
             </div>
+            <!--ACORDEON-->
             <div class="footer__acordeon accordion" id="accordionExample">
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
-                            <button class="footer__acordeon__boton btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="footer__acordeon btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Secciones<i class="bi bi-chevron-down"></i>
                             </button>
                         </h2>
@@ -133,7 +210,7 @@
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
-                            <button class="footer__acordeon__boton btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="footer__acordeon btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Atención al cliente<i class="bi bi-chevron-down"></i>
                             </button>
                         </h2>
@@ -141,9 +218,9 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <ul>
-                                <li>FAQ</li>
-                                <li>Términos y condiciones</li>
-                                <li>Contacto</li>
+                                <li><a href="demasiado-lejos.html">FAQ</a></li>
+                                <li><a href="demasiado-lejos.html">Términos y condiciones</a></li>
+                                <li><a href="demasiado-lejos.html">Contacto</a></li>
                             </ul>
                         </div>
                     </div>
@@ -151,7 +228,7 @@
                 <div class="card">
                     <div class="card-header" id="headingThree">
                         <h2 class="mb-0">
-                            <button class="footer__acordeon__boton btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button class="footer__acordeon btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Contáctanos<i class="bi bi-chevron-down"></i>
                             </button>
                         </h2>
@@ -159,8 +236,8 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <ul>
-                                <li><a href="#">WhatsApp: +54 9 11 XXXX XXXX</a></li>
-                                <li><a href=":mailto">contacto@laluna.com.ar</a></li>
+                                <li><a href="https://wa.me/5491131050323?text=Hola,%20tengo%20una%20consulta:%20" target="_blank">WhatsApp: +54 9 11 3105 0323</a></li>
+                                <li><a href="mailto:contacto@laluna.com.ar">contacto@laluna.com.ar</a></li>
                             </ul>
                         </div>
                     </div>

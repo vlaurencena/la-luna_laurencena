@@ -8,68 +8,64 @@
     align-items: center;
     background-color: white;
     padding: 1rem;
-}
 
-.contenedorContacto__contenedorTitulo {
-    text-align: center;
-    font-size: 1rem;
-    color: $color-gris-oscuro;
-}
+    &__contenedorTitulo {
+        text-align: center;
+        font-size: 1rem;
+        color: $color-gris-oscuro;
 
-.contenedorContacto__contenedorTitulo p:first-child {
-    font-size: 3rem;
-}
+        & h1 {
 
-.contenedorContacto__contenedorTitulo p:nth-child(2) {
-    font-size: 1.5rem;
-}
+            font-size: 3rem;
+        }
 
-.contenedorContacto__contenedorFormulario {
-    width: 100%;
-    padding: 1rem;
+        & p {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__contenedorFormulario {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    &__modal {
+        color: black;
+
+        & .btn-secondary {
+            background-color: $color-gris-oscuro;
+        }
+    }
 }
 
 .formularioContacto {
     width: 100%;
-}
 
-form {
-    color: $color-blanco;
-}
+    & input {
+        width: 100%;
+        margin-bottom: 1rem;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid $color-gris-oscuro;
 
-input {
-    width: 100%;
-    margin-bottom: 1rem;
-    background: transparent;
-    border: 0;
-    border-bottom: 2px solid $color-gris-oscuro;
-}
+        &[type=checkbox] {
+            width: auto;
+            margin-bottom: 0;
+        }
+    }
 
-input::placeholder {
-    color: $color-gris-oscuro;
-}
+    & label {
+        color: $color-gris-oscuro;
+        margin-right: 1rem;
+    }
 
-input[type=checkbox] {
-    width: auto;
-    margin-bottom: 0;
-}
-
-input[type=submit] {
-    border: 2px solid $color-gris-oscuro;
-    width: auto;
-    display: block;
-    margin: auto;
-    padding: .8rem;
-}
-
-label {
-    color: $color-gris-oscuro;
-    margin-right: 1rem;
-}
-
-.formularioContacto__suscripcionNewsletter {
-    display: flex;
-    align-items: center;
+    & button {
+        border: 2px solid $color-gris-oscuro;
+        width: auto;
+        display: block;
+        margin: auto;
+        padding: .8rem;
+    }
 }
 
 /*-----TABLET-----*/
@@ -86,8 +82,9 @@ label {
         width: 768px;
         height: auto;
         min-height: auto;
+        margin: 10%;
     }
 }
 
 /*-----DESKTOP-----*/
-@media only screen and (min-width: 992px) {}
+// @media only screen and (min-width: 992px) {}

@@ -1,5 +1,4 @@
 /*RESET*/
-
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +32,7 @@ body {
     grid-template-columns: 100%;
 }
 
-#header {
+.navContainer {
     position: sticky;
     top: -1px;
     z-index: 2;
@@ -46,6 +45,7 @@ body {
 
 p {
     margin: 0;
+    font-family: serif;
 }
 
 button:disabled {
@@ -57,25 +57,19 @@ ul {
 }
 
 /*GENERAL DE TODAS LAS SECCIONES*/
-.containerSeccion>div>img,
-    {
-    width: 100%;
-    min-height: 50vh;
-    object-fit: cover;
-}
-
 .containerSeccionImagen {
-    background-color: lightgray;
-    border: 1px solid blue;
-    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .containerSeccionTexto {
     margin: 0 2rem;
-}
-
-.containerSeccion>div:last-of-type {
-    margin-bottom: 2rem;
 }
 
 .seccionTitulo {
@@ -84,23 +78,27 @@ ul {
     margin: .5rem 0;
 }
 
+.seccionSubtitulo {
+    font-family: "Bebas Neue", "Roboto", sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+
 .seccionTexto {
     font-family: serif;
     line-height: 1.5;
+}
+
+.textoBajadaImagen {
+    font-style: italic;
+    text-align: center;
 }
 
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
 
     /*GENERAL DE TODAS LAS SECCIONES*/
-    .containerSeccionImagen {
-        min-height: auto;
-    }
-
-    .containerSeccion>div>img {
-        min-height: 100%;
-    }
-
     .containerSeccionTexto {
         margin: 2rem;
     }
@@ -118,12 +116,8 @@ ul {
 @media only screen and (min-width: 992px) {
 
     /*GENERAL DE TODAS LAS SECCIONES*/
-    .containerSeccionTexto {
-        margin: 2rem 4rem;
-    }
-
     .seccionTexto {
-        font-size: 1.5vw;
+        font-size: 1.4vw;
         column-count: 2;
         column-gap: 1.5rem;
     }

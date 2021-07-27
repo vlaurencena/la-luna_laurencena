@@ -15,23 +15,82 @@
         "exploracionItem2"
         "exploracionItem3"
         "exploracionItem4"
-        "exploracionItem5"
-        "exploracionItem6";
+        "exploracionItem6"
+        "exploracionItem5";
     row-gap: 2rem;
+
+    &__item5 iframe {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 960px;
+        height: 100%;
+        min-height: 315px;
+    }
+}
+
+.flip-card-back {
+    display: none;
 }
 
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
     .containerExploracion {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, minmax(333px, 1fr));
+        grid-template-rows: auto;
         grid-template-areas:
             "exploracionItem1 exploracionItem2"
             "exploracionItem3 exploracionItem4"
-            "exploracionItem5 exploracionItem6";
+            "exploracionItem6 exploracionItem6"
+            "exploracionItem5 exploracionItem5";
         row-gap: 0;
+
+        &__item6 .seccionTexto {
+            column-count: 2;
+        }
     }
 }
 
 /*-----DESKTOP-----*/
-// @media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    .containerExploracion {
+        &__item4 .seccionSubtitulo {
+            display: none;
+        }
+
+        &__item6 .seccionTexto {
+            column-count: 4;
+        }
+    }
+
+    .flip-card {
+        width: 100%;
+        background-color: transparent;
+        perspective: 1000px;
+
+        &:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        &-front {
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        &-back {
+            @extend .flip-card-front;
+            display: block;
+            transform: rotateY(180deg);
+        }
+
+        &-inner {
+            position: relative;
+            width: 60%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+    }
+}

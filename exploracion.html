@@ -1,118 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <!-- META TAGS -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Un repaso por la increíble historia de la exploración de la Luna: desde las primeras observaciones de sus cráteres hasta la misión Apolo.">
+    <meta name="keywords" content="luna, exploracion, mision apolo, alunizaje, observacion">
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type=text/css href="css/estilos.css">
-    <meta name="description" content="Un repaso por la increíble historia de la exploración de la Luna: desde las primeras observaciones de sus cráteres hasta la misión Apolo.">
-    <meta name="keywords" content="luna, exploracion, mision apolo, alunizaje, observacion">
+    <!-- TITLE -->
     <title>La Luna | La exploración</title>
 </head>
 
 <body>
     <div class="wraper">
         <!--HEADER-->
-        <div id="header">
+        <header class="navContainer">
             <nav class="navbar navbar-expand-lg ">
                 <button id="navbar__boton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">INICIO</span></a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="satelite.html">SATÉLITE</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="satelite.html">SATÉLITE</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="evolucion.html">EVOLUCIÓN</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="evolucion.html">EVOLUCIÓN</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="exploracion.html">EXPLORACIÓN</a>
-                        </li>
+                        <li class="nav-item active"><a class="nav-link" href="exploracion.html">EXPLORACIÓN</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">CONTACTO</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
                         <li class="separadorNav">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tienda.html">TIENDA</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="tienda.html">TIENDA</a></li>
                     </ul>
                 </div>
-                <div class="seccionActiva active nav-item">
-                    <a class="nav-link" href="#">EXPLORACIÓN</a>
-                </div>
+                <h1 class="seccionActiva active nav-item"><a class="nav-link" href="#">EXPLORACIÓN</a></h1>
             </nav>
-        </div>
+        </header>
         <!--MAIN-->
-        <div class="main">
+        <main>
             <div class="containerExploracion containerSeccion">
                 <div class="containerExploracion__item1 containerSeccionImagen">
-                    <img src="media/home/home-evolucion.jpeg" alt="">
+                    <img src="media/home/home-evolucion-md.jpeg" alt="XX">
                 </div>
                 <div class="containerExploracion__item2 containerSeccionTexto">
-                    <div class="seccionTitulo">Título de ejemplo</div>
+                    <h2 class="seccionTitulo">OBSERVADORES DE LA LUNA</h2>
                     <div class="seccionTexto">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
+                        <p>La publicación de la obra <em>Sidereus muncious</em> (1610) en la que Galileo anunciaba sus observaciones de la Luna con un telescopio, motivó que los astrónomos de la época se lanzaran a estudiar el satélite con el nuevo instrumento y, sobre todo, a cartografiarlo con detalle.</p>
+                        <p>En este sentido, hubo dos trabajos cartográficos que se destacaron sobre los demás: <em>Selenographia</em> (1647), de Hevelius, y <em>Almagestum novum</em> (1651), de Giovanni Battista Riccioli.</p>
+                        <p>Ambos mantuvieron su vigencia durante siglos, pero finalmente se impuso la mayor brevedad de los nombres de Riccioli: de hecho, constituyen la base de la nomenclatura actual, adoptada en 1919 por la Unión Astronómica Internacional (UAI).</p>
                     </div>
                 </div>
                 <div class="containerExploracion__item3 containerSeccionTexto">
-                    <div class="seccionTitulo">Título de ejemplo</div>
+                    <h2 class="seccionTitulo">LA CARRERA HACIA LA LUNA</h2>
                     <div class="seccionTexto">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
+                        <p>Durante la Guerra Fría, Estados Unidos y la Unión Soviética mantuvieron una dura competición tecnológica por conquistar el espacio y, por supuesto, la Luna. La teoría decía que era factible llegar hasta allí, pero había que demostrarlo técnicamente.</p>
+                        <p>Recorrer la distancia hasta la Luna y depositar suavemente un objeto en su superficie demostró fue un verdadero desafío. Hubo múltiples intentos fallidos pero la URSS tomó la delantera en 1959, cuando la nave Luna 2 se convirtió en el primer objeto artificial en impactar contra la Luna.</p>
+                        <p>Ese mismo año, Luna 3 obtuvo las primeras imágenes de la cara oculta de la Luna. Más tarde, Luna 9 ejecutó el primer alunizaje controlado (1966) y Luna 17 depositó el primer <em>rover</em>. Pero esto no significaba nada en comparación el reto más grande: llevar un ser humano.</p>
                     </div>
                 </div>
-                <div class="containerExploracion__item4 containerSeccionImagen">
+                <div class="containerExploracion__item4 ">
+                    <p class="seccionSubtitulo">Toca la imagen</p>
+                    <div class="flip-card containerSeccionImagen">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="media/exploracion/exploracion-2-luna-2.jpg" alt="Fotografía del lado lejano de la Luna, tomada por la sonda Luna 3">
+                                <p class="textoBajadaImagen">La primera fotografía de la cara oculta de la Luna, un mosaico de 29 imágenes tomadas en 1959 por la sonda Luna 3.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="media/exploracion/exploracion-2-lunar-reconnaissance-orbiter.jpg" alt="Fotografía de la Luna tomada por la sonda sonda Lunar Reconnaissance Orbiter">
+                                <p class="textoBajadaImagen">Una composición reciente de la misma región, realizada 50 años más tarde a partir de los datos de la sonda Lunar Reconnaissance Orbiter.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="containerExploracion__item5 containerSeccionImagen">
+                <div class="containerExploracion__item5">
+                    <iframe src="https://www.youtube.com/embed/hxPbnFc7iU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="containerExploracion__item6 containerSeccionTexto">
-                    <div class="seccionTitulo">Título de ejemplo</div>
+                    <h2 class="seccionTitulo">APOLO 11, LA LLEGADA A LA LUNA</h2>
                     <div class="seccionTexto">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, expedita laborum rerum itaque esse necessitatibus adipisci ipsum veritatis, earum explicabo voluptatibus, ab nihil ex eligendi consequatur libero sapiente cumque amet?</p>
+                        <p>El 16 de julio de 1969, el cohete estadounidense Saturno V despegó del centro espacial John F. Kennedy con los astronautas Neil Armstrong, Buzz Aldrin y Michael Collins a bordo. Entró en órtiba 12 minutos después y tras orbitar alrededor de la Tierra tomó el empujón necesario para llegar hasta la Luna.</p>
+                        <p>A pesar de ello, tardó 3 días en llegar a nuestro satélite. El 20 de julio, Collins, piloto del módulo de mando y servicio con el que debían regresar a la Tierra, desenganchó el módulo lunar Eagle con Armstrong y Aldrin en su interior. </p>
+                        <p>Estos, al percatarse de que aterrizarían en un lugar pedregoso varios kilómetros al oeste del punto previsto, forzaron un descenso semimanual. Alunizaron cuando al Eagle le quedaban solo 25 segundos de combustible. Armstrong exclamó entonces: "El águila ha aterrizado" y descendió por la escalerilla a hacer historia.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
         <!--FOOTER-->
-        <footer>
+        <footer class="footer">
+            <!--HEADER-->
             <div class="footer__header">
                 <p>La Luna</p>
             </div>
+            <!--NEWSLETTER-->
             <div class="footer__formularioNewsletter">
                 <p>Suscríbete a nuestro newsletter</p>
-                <form class="formularioNewsletter" action="exploracion.html" method="get">
+                <form action="exploracion.html" method="get">
                     <input type="email" placeholder="Mi correo electrónico">
-                    <button class="footer__formularioNewsletter__boton"><i class="bi bi-arrow-right"></i></button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNewsletter"><i class="bi bi-arrow-right"></i></button>
                 </form>
             </div>
+            <!-- MODAL -->
+            <div class="footer__modal modal fade" id="modalNewsletter" tabindex="-1" role="dialog" aria-labelledby="modalNewsletterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">¡Gracias por suscribirte!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Te hemos enviado un correo electrónico para que confirmes tu suscripción.
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button></div>
+                    </div>
+                </div>
+            </div>
+            <!--REDES SOCIALES-->
             <div class="footer__redesSociales">
                 <ul>
-                    <li><i class="bi bi-facebook"></i></li>
-                    <li><i class="bi bi-instagram"></i></li>
-                    <li><i class="bi bi-twitter"></i></li>
-                    <li><i class="bi bi-youtube"></i></li>
+                    <li><a href="demasiado-lejos.html"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="demasiado-lejos.html"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="demasiado-lejos.html"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="demasiado-lejos.html"><i class="bi bi-youtube"></i></a></li>
                 </ul>
             </div>
+            <!--ACORDEON-->
             <div class="footer__acordeon accordion" id="accordionExample">
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
-                            <button class="footer__acordeon__boton btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="footer__acordeon btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Secciones<i class="bi bi-chevron-down"></i>
                             </button>
                         </h2>
@@ -133,7 +156,7 @@
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
-                            <button class="footer__acordeon__boton btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="footer__acordeon btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Atención al cliente<i class="bi bi-chevron-down"></i>
                             </button>
                         </h2>
@@ -141,9 +164,9 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <ul>
-                                <li>FAQ</li>
-                                <li>Términos y condiciones</li>
-                                <li>Contacto</li>
+                                <li><a href="demasiado-lejos.html">FAQ</a></li>
+                                <li><a href="demasiado-lejos.html">Términos y condiciones</a></li>
+                                <li><a href="demasiado-lejos.html">Contacto</a></li>
                             </ul>
                         </div>
                     </div>
@@ -151,7 +174,7 @@
                 <div class="card">
                     <div class="card-header" id="headingThree">
                         <h2 class="mb-0">
-                            <button class="footer__acordeon__boton btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button class="footer__acordeon btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Contáctanos<i class="bi bi-chevron-down"></i>
                             </button>
                         </h2>
@@ -159,8 +182,8 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <ul>
-                                <li><a href="#">WhatsApp: +54 9 11 XXXX XXXX</a></li>
-                                <li><a href=":mailto">contacto@laluna.com.ar</a></li>
+                                <li><a href="https://wa.me/5491131050323?text=Hola,%20tengo%20una%20consulta:%20" target="_blank">WhatsApp: +54 9 11 3105 0323</a></li>
+                                <li><a href="mailto:contacto@laluna.com.ar">contacto@laluna.com.ar</a></li>
                             </ul>
                         </div>
                     </div>
