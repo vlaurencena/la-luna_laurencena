@@ -1,3 +1,4 @@
+/*-- INICIO FOOTER --*/
 .footer {
     min-height: 3.375rem;
     background-color: $color-gris;
@@ -7,8 +8,16 @@
     flex-direction: column;
     font-family: "Roboto", sans-serif;
 
+    &__header {
+        font-family: "Bebas Neue", "Roboto", sans-serif;
+    }
+
     /*FORMULARIO*/
     &__formularioNewsletter {
+        & p {
+            font-family: "Roboto", sans-serif;
+        }
+
         & form {
             position: relative;
 
@@ -162,3 +171,5 @@
         display: block !important;
     }
 }
+
+/*-- FIN FOOTER --*/

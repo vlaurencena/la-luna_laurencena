@@ -1,3 +1,4 @@
+/*-- INICIO MAIN --*/
 /*RESET*/
 * {
     margin: 0;
@@ -93,6 +94,7 @@ ul {
 .textoBajadaImagen {
     font-style: italic;
     text-align: center;
+    color: white;
 }
 
 /*-----TABLET-----*/
@@ -122,3 +124,5 @@ ul {
         column-gap: 1.5rem;
     }
 }
+
+/*-- FIN MAIN --*/

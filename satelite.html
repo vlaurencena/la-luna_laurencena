@@ -10,6 +10,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type=text/css href="css/estilos.css">
+    <!-- ÍCONO -->
+    <link rel="icon" type="image/png" href="media/icono/icono-luna.png">
     <!-- TITLE -->
     <title>La Luna | El satélite de la Tierra</title>
 </head>
@@ -41,7 +43,7 @@
         <!--MAIN-->
         <main class="containerSatelite">
             <div class="containerSatelite__item1 containerSeccionImagen">
-                <img src="media/satelite/satelite-item-1.png" alt="" srcset="
+                <img src="media/satelite/satelite-item-1.png" alt="Imagen de la Tierra vista desde la Luna" srcset="
                 media/satelite/satelite-item-1-sm.jpeg 768w,
                 media/satelite/satelite-item-1-md.jpeg 496w,
                 media/satelite/satelite-item-1-lg.jpeg 960w,
@@ -57,7 +59,7 @@
                     <p>El tamaño de la Luna es enorme en proporción con la Tierra: equivale al 27% de esta, por lo que ambas están al límite de lo que se considera un planeta doble. Solo es posible hallar lunas de este tamaño orbitando los planetas gigantes.</p>
                     <p>En nuestro sistema solar, todos los satélites tienen masas inferiores a 1:4.000 la masa de su planeta o planeta enano, con la excepción de los sistemas Tierra-Luna y Plutón-Caronte que tienen una proporción de 1:81 y 1:7 respectivamente.</p>
                     <p>El límite comúnmente aceptado para diferenciar entre un planeta binario y un sistema planeta-satélite, se basa en la situación del centro de masas de los dos cuerpos o baricentro. Si el baricentro no se encuentra bajo la superficie de ninguno de los dos cuerpos, se da por hecho que es un sistema planeta binario.</p>
-                    <p>Siendo así, ambos astros orbitarían el uno respecto al otro mediante un eje situado en el espacio libre ubicado entre de los dos. Según esta definición, Plutón (planeta enano) y Caronte (la más grande de sus cinco lunas) se considerarían ambos como un sistema de planeta binario compuesto por ambos cuerpos celestes; mientras que el sistema de la Tierra y la Luna, sería propiamente un sistema planeta-satélite.</p>
+                    <p>Siendo así, ambos astros orbitarían el uno respecto al otro mediante un eje situado en el espacio libre ubicado entre los dos. Según esta definición, Plutón (planeta enano) y Caronte (la más grande de sus cinco lunas) se considerarían ambos como un sistema de planeta binario compuesto por ambos cuerpos celestes; mientras que el sistema de la Tierra y la Luna, sería propiamente un sistema planeta-satélite.</p>
                 </div>
             </div>
             <div class="containerSatelite__item3">
@@ -75,6 +77,8 @@
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -96,6 +100,20 @@
                                     <div>365,25 días terrestres</div>
                                     <div>27,32 días terrestres</div>
                                     <div class="containerSatelite__item3 titulo">PERÍODO ORBITAL</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="contenedor__carousel-item">
+                                    <div>14 °C</div>
+                                    <div>-25 °C</div>
+                                    <div class="containerSatelite__item3 titulo">TEMPERATURA MEDIA</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="contenedor__carousel-item">
+                                    <div>9,8 m/s<sup>2</sup></div>
+                                    <div>1,62 m/s<sup>2</sup></div>
+                                    <div class="containerSatelite__item3 titulo">GRAVEDAD EN SUPERFICIE</div>
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -121,7 +139,7 @@
                     <div>TEMPERATURA MEDIA</div>
                     <div>EXCENTRICIDAD ORBITAL</div>
                     <div>GRAVEDAD EN SUPERFICIE</div>
-                    <div><img src="media/satelite/satelite-item-3-tierra.png" alt=""></div>
+                    <div class="containerImagen"><img src="media/satelite/satelite-item-3-tierra.png" alt="Imagen de la Tierra"></div>
                     <div>510 millones de km<sup>2</sup></div>
                     <div>5,972 x10<sup>24</sup>kg</div>
                     <div>150 millones km</div>
@@ -131,7 +149,7 @@
                     <div>14 °C</div>
                     <div>0,017</div>
                     <div>9,8 m/s<sup>2</sup></div>
-                    <div><img src="media/satelite/satelite-item-3-luna.png" alt=""></div>
+                    <div class="containerImagen"><img src="media/satelite/satelite-item-3-luna.png" alt="Imagen de la Luna"></div>
                     <div>38 millones de km<sup>2</sup></div>
                     <div>73,49 x 10<sup>21</sup> kg</div>
                     <div>384 400 km</div>
@@ -147,9 +165,7 @@
         <!--FOOTER-->
         <footer class="footer">
             <!--HEADER-->
-            <div class="footer__header">
-                <p>La Luna</p>
-            </div>
+            <div class="footer__header">La Luna</div>
             <!--NEWSLETTER-->
             <div class="footer__formularioNewsletter">
                 <p>Suscríbete a nuestro newsletter</p>

@@ -1,7 +1,10 @@
 @charset "UTF-8";
+/*-- INICIO FUENTES & ÍCONOS --*/
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+/*-- FIN FUENTES & ÍCONOS --*/
+/*-- INICIO MIXINS & KEYFRAMES --*/
 @keyframes escalarImagen {
   from { }
   to {
@@ -28,6 +31,8 @@
   100% {
     transform: scale(1); } }
 
+/*-- FIN MIXINS & KEYFRAMES --*/
+/*-- INICIO MAIN --*/
 /*RESET*/
 * {
   margin: 0;
@@ -105,7 +110,8 @@ ul {
 
 .textoBajadaImagen {
   font-style: italic;
-  text-align: center; }
+  text-align: center;
+  color: white; }
 
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
@@ -125,6 +131,8 @@ ul {
     column-count: 2;
     column-gap: 1.5rem; } }
 
+/*-- FIN MAIN --*/
+/*-- INICIO HEADER --*/
 .navContainer {
   min-height: 3.375rem;
   background-color: #C3B9B7;
@@ -185,6 +193,8 @@ a.nav-link {
   .seccionActiva {
     display: none; } }
 
+/*-- FIN HEADER --*/
+/*-- INICIO FOOTER --*/
 .footer {
   min-height: 3.375rem;
   background-color: #C3B9B7;
@@ -196,6 +206,10 @@ a.nav-link {
   /*FORMULARIO*/
   /*MODAL*/
   /*REDES SOCIALES*/ }
+  .footer__header {
+    font-family: "Bebas Neue", "Roboto", sans-serif; }
+  .footer__formularioNewsletter p {
+    font-family: "Roboto", sans-serif; }
   .footer__formularioNewsletter form {
     position: relative; }
     .footer__formularioNewsletter form input {
@@ -290,6 +304,8 @@ a.nav-link {
   .collapse {
     display: block !important; } }
 
+/*-- FIN FOOTER --*/
+/*-- INICIO INDEX --*/
 .containerHome {
   display: grid;
   grid-template-rows: minmax(333px, 1.5fr) minmax(333px, 1fr) minmax(333px, 1fr) minmax(333px, 1fr);
@@ -395,6 +411,8 @@ a.nav-link {
     margin-top: -1rem;
     margin-left: .2rem; } }
 
+/*-- FIN INDEX --*/
+/*-- INICIO SATÉLITE --*/
 .containerSatelite__item1 {
   grid-area: sateliteItem1; }
 
@@ -439,7 +457,8 @@ a.nav-link {
 .contenedor__carousel-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  text-align: center; }
+  text-align: center;
+  margin-top: 2rem; }
 
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
@@ -461,8 +480,15 @@ a.nav-link {
     grid-template-columns: 10vw repeat(9, auto);
     text-align: center;
     align-items: center;
-    margin: 2rem 4rem; } }
+    margin: 2rem 0;
+    grid-gap: 1rem; }
+    .containerSatelite__item3-versionEscritorio .containerImagen {
+      padding: .5rem; }
+    .containerSatelite__item3-versionEscritorio img {
+      width: 100%; } }
 
+/*-- FIN SATÉLITE --*/
+/*-- INICIO EVOLUCIÓN --*/
 .containerEvolucion__item1 {
   grid-area: evolucionItem1; }
 
@@ -500,7 +526,10 @@ a.nav-link {
       max-width: 100%;
       margin: auto; }
     .containerEvolucion__item4 .containerSeccionTexto {
-      padding: 0 4rem 2rem 4rem; }
+      padding: 0 4rem 2rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
       .containerEvolucion__item4 .containerSeccionTexto .seccionTexto {
         column-count: 1;
         border-bottom: solid 2px black; }
@@ -545,14 +574,15 @@ a.nav-link {
     .containerEvolucion__item4 img {
       width: 100%; }
     .containerEvolucion__item4 .containerSeccionTexto {
-      border-bottom: 0; }
+      border-bottom: 0;
+      display: none; }
   .containerEvolucion__item4__imagen-1 {
     grid-area: item4__imagen-1; }
   .containerEvolucion__item4__explicacion-1 {
     grid-area: item4__explicacion;
     display: none; }
   .containerEvolucion__item4__imagen-1:hover ~ .containerEvolucion__item4__explicacion-1 {
-    display: block;
+    display: flex;
     animation: aparicion 1s ease 0s 1 normal forwards; }
   .containerEvolucion__item4__imagen-2 {
     grid-area: item4__imagen-2; }
@@ -560,7 +590,7 @@ a.nav-link {
     grid-area: item4__explicacion;
     display: none; }
   .containerEvolucion__item4__imagen-2:hover ~ .containerEvolucion__item4__explicacion-2 {
-    display: block;
+    display: flex;
     animation: aparicion 1s ease 0s 1 normal forwards; }
   .containerEvolucion__item4__imagen-3 {
     grid-area: item4__imagen-3; }
@@ -568,7 +598,7 @@ a.nav-link {
     grid-area: item4__explicacion;
     display: none; }
   .containerEvolucion__item4__imagen-3:hover ~ .containerEvolucion__item4__explicacion-3 {
-    display: block;
+    display: flex;
     animation: aparicion 1s ease 0s 1 normal forwards; }
   .containerEvolucion__item4__imagen-4 {
     grid-area: item4__imagen-4; }
@@ -576,7 +606,7 @@ a.nav-link {
     grid-area: item4__explicacion;
     display: none; }
   .containerEvolucion__item4__imagen-4:hover ~ .containerEvolucion__item4__explicacion-4 {
-    display: block;
+    display: flex;
     animation: aparicion 1s ease 0s 1 normal forwards; }
   .containerEvolucion__item4__imagen-5 {
     grid-area: item4__imagen-5; }
@@ -584,7 +614,7 @@ a.nav-link {
     grid-area: item4__explicacion;
     display: none; }
   .containerEvolucion__item4__imagen-5:hover ~ .containerEvolucion__item4__explicacion-5 {
-    display: block;
+    display: flex;
     animation: aparicion 1s ease 0s 1 normal forwards; }
   .containerEvolucion__item4__imagen-6 {
     grid-area: item4__imagen-6; }
@@ -592,9 +622,11 @@ a.nav-link {
     grid-area: item4__explicacion;
     display: none; }
   .containerEvolucion__item4__imagen-6:hover ~ .containerEvolucion__item4__explicacion-6 {
-    display: block;
+    display: flex;
     animation: aparicion 1s ease 0s 1 normal forwards; } }
 
+/*-- FIN EVOLUCIÓN --*/
+/*-- INICIO EXPLORACIÓN --*/
 .containerExploracion__item1 {
   grid-area: exploracionItem1; }
 
@@ -621,16 +653,40 @@ a.nav-link {
   grid-template-rows: repeat(auto, 1fr);
   grid-template-areas: "exploracionItem1" "exploracionItem2" "exploracionItem3" "exploracionItem4" "exploracionItem6" "exploracionItem5";
   row-gap: 2rem; }
+  .containerExploracion__item4 {
+    background-color: black;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .containerExploracion__item4 p {
+      color: white;
+      width: 80%;
+      margin: 1rem auto 0 auto; }
+    .containerExploracion__item4 .seccionSubtitulo.clic {
+      display: none; }
   .containerExploracion__item5 iframe {
     display: block;
+    padding-bottom: 2rem;
     margin: auto;
     width: 100%;
     max-width: 960px;
     height: 100%;
     min-height: 315px; }
 
-.flip-card-back {
+.flip-card img {
+  max-width: 544px;
+  margin: auto; }
+
+.flip-card .flip-card-back {
   display: none; }
+
+.flip-card-front,
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
 
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
@@ -644,31 +700,22 @@ a.nav-link {
 
 /*-----DESKTOP-----*/
 @media only screen and (min-width: 992px) {
-  .containerExploracion__item4 .seccionSubtitulo {
+  .containerExploracion__item4 .seccionSubtitulo.toca {
     display: none; }
+  .containerExploracion__item4 .seccionSubtitulo.clic {
+    display: inline-block; }
+  .containerExploracion__item5 iframe {
+    min-height: 600px; }
   .containerExploracion__item6 .seccionTexto {
-    column-count: 4; }
-  .flip-card {
-    width: 100%;
-    background-color: transparent;
-    perspective: 1000px; }
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg); }
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      -webkit-backface-visibility: hidden;
-      /* Safari */
-      backface-visibility: hidden; }
-    .flip-card-back {
-      display: block;
-      transform: rotateY(180deg); }
-    .flip-card-inner {
-      position: relative;
-      width: 60%;
-      text-align: center;
-      transition: transform 0.8s;
-      transform-style: preserve-3d; } }
+    column-count: 4; } }
 
+/*-----LG DESKTOP-----*/
+@media only screen and (min-width: 1500px) {
+  .containerExploracion__item4 {
+    min-height: 800px; } }
+
+/*-- FIN EXPLORACIÓN --*/
+/*-- INICIO CONTACTO --*/
 .contenedorContacto {
   display: flex;
   flex-direction: column;
@@ -733,6 +780,8 @@ a.nav-link {
     margin: 10%; } }
 
 /*-----DESKTOP-----*/
+/*-- FIN CONTACTO --*/
+/*-- INICIO TIENDA --*/
 /*BARRA TIENDA*/
 .barraNavTienda {
   box-shadow: 0 3px 35px 0 rgba(0, 0, 0, 0.3);
@@ -761,6 +810,8 @@ a.nav-link {
 .showroomProductos {
   max-width: 1200px;
   margin: auto; }
+  .showroomProductos .carousel {
+    display: none; }
 
 /*CAROUSEL*/
 .carousel {
@@ -768,22 +819,53 @@ a.nav-link {
 
 /*CATEGORIAS*/
 .contenedorCategorias {
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 100vw);
+  row-gap: 1rem; }
 
 .categoria {
-  display: inline-block;
-  position: relative;
-  text-align: center !important;
-  margin: 1rem 0; }
-  .categoria > img {
-    width: 100%; }
-  .categoria__texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%); }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.imagen-categoria-indumentaria {
+  background-image: url("../media/tienda/tienda-categoria-indumentaria.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.imagen-categoria-telescopios {
+  background-image: url("../media/tienda/tienda-categoria-telescopios.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.imagen-categoria-hogar {
+  background-image: url("../media/tienda/tienda-categoria-hogar.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.imagen-categoria-jugueteria {
+  background-image: url("../media/tienda/tienda-categoria-jugueteria.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.imagen-categoria-varios {
+  background-image: url("../media/tienda/tienda-categoria-varios.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.imagen-categoria-ofertas {
+  background-image: url("../media/tienda/tienda-categoria-ofertas.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .nombreCategoria {
   font-size: 2rem; }
@@ -796,7 +878,7 @@ a.nav-link {
   .botonCategoria a {
     color: #FFFFFF; }
 
-/*CARTES NECESITAS AYUDA*/
+/*CARTEL NECESITAS AYUDA*/
 .contenedorNecesitasAyuda {
   position: fixed;
   bottom: 1rem;
@@ -819,17 +901,22 @@ a.nav-link {
 @media only screen and (min-width: 768px) {
   .showroomProductos {
     padding: 0 1rem; }
+    .showroomProductos .carousel {
+      display: inline-block; }
+  .categoria {
+    margin: 0; }
   .contenedorCategorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem; } }
+    grid-template-rows: repeat(2, minmax(30%, 400px));
+    grid-gap: 1rem;
+    margin: 1rem 0; } }
 
 /*-----DESKTOP-----*/
+/*-- FIN TIENDA --*/
+/*-- INICIO DEMASIADO LEJOS --*/
 .containerDemasiadoLejos {
-  background-image: url("../media/demasiado-lejos/demasiado-lejos-fondo.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url("../media/demasiado-lejos/demasiado-lejos-fondo-sm.jpeg") no-repeat center;
   display: flex;
   flex-direction: column;
   min-height: 70vh;
@@ -854,12 +941,16 @@ a.nav-link {
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
   .containerDemasiadoLejos {
+    background-image: url("../media/demasiado-lejos/demasiado-lejos-fondo-md.jpeg");
     padding: 5rem; } }
 
 /*-----DESKTOP-----*/
 @media only screen and (min-width: 992px) {
   .containerDemasiadoLejos {
+    background-image: url("../media/demasiado-lejos/demasiado-lejos-fondo-lg.jpeg");
     justify-content: space-around; }
     .containerDemasiadoLejos img {
       width: 50%;
       max-width: 388px; } }
+
+/*-- FIN DEMASIADO LEJOS --*/

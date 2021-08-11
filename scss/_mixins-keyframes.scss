@@ -1,3 +1,4 @@
+/*-- INICIO MIXINS & KEYFRAMES --*/
 @mixin flexCentrado() {
     display: flex;
     justify-content: center;
@@ -46,3 +47,5 @@
         transform: scale(1);
     }
 }
+
+/*-- FIN MIXINS & KEYFRAMES --*/

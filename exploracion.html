@@ -10,6 +10,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type=text/css href="css/estilos.css">
+    <!-- ÍCONO -->
+    <link rel="icon" type="image/png" href="media/icono/icono-luna.png">
     <!-- TITLE -->
     <title>La Luna | La exploración</title>
 </head>
@@ -44,7 +46,15 @@
         <main>
             <div class="containerExploracion containerSeccion">
                 <div class="containerExploracion__item1 containerSeccionImagen">
-                    <img src="media/home/home-evolucion-md.jpeg" alt="XX">
+                    <img src="media/exploracion/exploracion-observadores-luna-lg.jpg" alt="Galileo Galilei" srcset="
+                media/exploracion/exploracion-observadores-luna-sm.jpg 768w,
+                media/exploracion/exploracion-observadores-luna-md.jpg 496w,
+                media/exploracion/exploracion-observadores-luna-lg.jpg 960w,
+                " sizes="
+                (min-width: 992px) 960px,
+                (min-width: 768px) 496px,
+                768px,
+                ">
                 </div>
                 <div class="containerExploracion__item2 containerSeccionTexto">
                     <h2 class="seccionTitulo">OBSERVADORES DE LA LUNA</h2>
@@ -58,12 +68,13 @@
                     <h2 class="seccionTitulo">LA CARRERA HACIA LA LUNA</h2>
                     <div class="seccionTexto">
                         <p>Durante la Guerra Fría, Estados Unidos y la Unión Soviética mantuvieron una dura competición tecnológica por conquistar el espacio y, por supuesto, la Luna. La teoría decía que era factible llegar hasta allí, pero había que demostrarlo técnicamente.</p>
-                        <p>Recorrer la distancia hasta la Luna y depositar suavemente un objeto en su superficie demostró fue un verdadero desafío. Hubo múltiples intentos fallidos pero la URSS tomó la delantera en 1959, cuando la nave Luna 2 se convirtió en el primer objeto artificial en impactar contra la Luna.</p>
+                        <p>Recorrer la distancia hasta la Luna y depositar suavemente un objeto en su superficie demostró ser un verdadero desafío. Hubo múltiples intentos fallidos pero la URSS tomó la delantera en 1959, cuando la nave Luna 2 se convirtió en el primer objeto artificial en impactar contra la Luna.</p>
                         <p>Ese mismo año, Luna 3 obtuvo las primeras imágenes de la cara oculta de la Luna. Más tarde, Luna 9 ejecutó el primer alunizaje controlado (1966) y Luna 17 depositó el primer <em>rover</em>. Pero esto no significaba nada en comparación el reto más grande: llevar un ser humano.</p>
                     </div>
                 </div>
                 <div class="containerExploracion__item4 ">
-                    <p class="seccionSubtitulo">Toca la imagen</p>
+                    <p class="seccionSubtitulo toca">Toca la imagen</p>
+                    <p class="seccionSubtitulo clic">Haz clic en la imagen</p>
                     <div class="flip-card containerSeccionImagen">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -83,9 +94,9 @@
                 <div class="containerExploracion__item6 containerSeccionTexto">
                     <h2 class="seccionTitulo">APOLO 11, LA LLEGADA A LA LUNA</h2>
                     <div class="seccionTexto">
-                        <p>El 16 de julio de 1969, el cohete estadounidense Saturno V despegó del centro espacial John F. Kennedy con los astronautas Neil Armstrong, Buzz Aldrin y Michael Collins a bordo. Entró en órtiba 12 minutos después y tras orbitar alrededor de la Tierra tomó el empujón necesario para llegar hasta la Luna.</p>
+                        <p>El 16 de julio de 1969, el cohete estadounidense Saturno V despegó del centro espacial John F. Kennedy con los astronautas Neil Armstrong, Buzz Aldrin y Michael Collins a bordo. Entró en órbita 12 minutos después y tras orbitar alrededor de la Tierra tomó el empujón necesario para llegar hasta la Luna.</p>
                         <p>A pesar de ello, tardó 3 días en llegar a nuestro satélite. El 20 de julio, Collins, piloto del módulo de mando y servicio con el que debían regresar a la Tierra, desenganchó el módulo lunar Eagle con Armstrong y Aldrin en su interior. </p>
-                        <p>Estos, al percatarse de que aterrizarían en un lugar pedregoso varios kilómetros al oeste del punto previsto, forzaron un descenso semimanual. Alunizaron cuando al Eagle le quedaban solo 25 segundos de combustible. Armstrong exclamó entonces: "El águila ha aterrizado" y descendió por la escalerilla a hacer historia.</p>
+                        <p>Estos, al percatarse de que aterrizarían en un lugar pedregoso varios kilómetros al oeste del punto previsto, forzaron un descenso semimanual. Alunizaron cuando al Eagle le quedaban solo 25 segundos de combustible. Armstrong exclamó entonces: “El águila ha aterrizado” y descendió por la escalerilla a hacer historia.</p>
                     </div>
                 </div>
             </div>
@@ -93,9 +104,7 @@
         <!--FOOTER-->
         <footer class="footer">
             <!--HEADER-->
-            <div class="footer__header">
-                <p>La Luna</p>
-            </div>
+            <div class="footer__header">La Luna</div>
             <!--NEWSLETTER-->
             <div class="footer__formularioNewsletter">
                 <p>Suscríbete a nuestro newsletter</p>

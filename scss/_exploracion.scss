@@ -1,3 +1,4 @@
+/*-- INICIO EXPLORACIÓN --*/
 @for $i from 1 through 6 {
     .containerExploracion__item#{$i} {
         grid-area: exploracionItem#{$i};
@@ -19,8 +20,27 @@
         "exploracionItem5";
     row-gap: 2rem;
 
+    &__item4 {
+        background-color: black;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & p {
+            color: white;
+            width: 80%;
+            margin: 1rem auto 0 auto;
+        }
+
+        & .seccionSubtitulo.clic {
+            display: none;
+        }
+    }
+
     &__item5 iframe {
         display: block;
+        padding-bottom: 2rem;
         margin: auto;
         width: 100%;
         max-width: 960px;
@@ -29,8 +49,23 @@
     }
 }
 
+.flip-card {
+    & img {
+        max-width: 544px;
+        margin: auto;
+    }
+
+    & .flip-card-back {
+        display: none;
+    }
+}
+
+.flip-card-front,
 .flip-card-back {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /*-----TABLET-----*/
@@ -54,43 +89,32 @@
 /*-----DESKTOP-----*/
 @media only screen and (min-width: 992px) {
     .containerExploracion {
-        &__item4 .seccionSubtitulo {
-            display: none;
+
+        &__item4 {
+            & .seccionSubtitulo.toca {
+                display: none;
+            }
+
+            & .seccionSubtitulo.clic {
+                display: inline-block;
+            }
+        }
+
+        &__item5 iframe {
+            min-height: 600px;
         }
 
         &__item6 .seccionTexto {
             column-count: 4;
         }
     }
+}
 
-    .flip-card {
-        width: 100%;
-        background-color: transparent;
-        perspective: 1000px;
-
-        &:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        &-front {
-            position: absolute;
-            -webkit-backface-visibility: hidden;
-            /* Safari */
-            backface-visibility: hidden;
-        }
-
-        &-back {
-            @extend .flip-card-front;
-            display: block;
-            transform: rotateY(180deg);
-        }
-
-        &-inner {
-            position: relative;
-            width: 60%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
+/*-----LG DESKTOP-----*/
+@media only screen and (min-width: 1500px) {
+    .containerExploracion__item4 {
+        min-height: 800px;
     }
 }
+
+/*-- FIN EXPLORACIÓN --*/

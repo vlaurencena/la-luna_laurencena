@@ -1,8 +1,6 @@
+/*-- INICIO DEMASIADO LEJOS --*/
 .containerDemasiadoLejos {
-    background-image: url("../media/demasiado-lejos/demasiado-lejos-fondo.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: url("../media/demasiado-lejos/demasiado-lejos-fondo-sm.jpeg") no-repeat center;
     display: flex;
     flex-direction: column;
     min-height: 70vh;
@@ -31,19 +29,19 @@
     }
 }
 
-
 /*-----TABLET-----*/
 @media only screen and (min-width: 768px) {
     .containerDemasiadoLejos {
+        background-image: url("../media/demasiado-lejos/demasiado-lejos-fondo-md.jpeg");
         padding: 5rem;
     }
 }
-
 
 /*-----DESKTOP-----*/
 @media only screen and (min-width: 992px) {
 
     .containerDemasiadoLejos {
+        background-image: url("../media/demasiado-lejos/demasiado-lejos-fondo-lg.jpeg");
         justify-content: space-around;
 
         & img {
@@ -52,3 +50,5 @@
         }
     }
 }
+
+/*-- FIN DEMASIADO LEJOS --*/
